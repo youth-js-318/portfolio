@@ -1,0 +1,43 @@
+header {
+    border-bottom: 1px solid #6c6880;
+    padding: 0 15px;
+
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        .socials {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    .socials {
+        display: flex;
+        gap: 15px;
+    }
+}
+
+main {
+    max-width: calc(800px + 30px);
+    padding: 0 15px;
+    margin: 0 auto;
+}
