@@ -24,4 +24,9 @@ export type Project = {
 export type Education = {
     id: number;
     degree: string;
+    institution: string;
+    field: string;
+    description: string;
+    startDate: string;
+    endDate: string;
 }
