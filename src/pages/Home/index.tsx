@@ -1,8 +1,6 @@
+import axios from "axios";
 import { useEffect, useState } from "react"
-
-type Education = {
-    degree: string;
-}
+import type { Education } from "../../types";
 
 const Home = () => {
     const [education, setEducation] = useState<Education[]>([])
@@ -12,9 +10,8 @@ const Home = () => {
 
     useEffect(
         () => {
-            fetch('https://portfolio-backend-production-a732.up.railway.app/education')
-                .then((response) => response.json())
-                .then((json) => setEducation(json))
+            axios.get<Education[]>('https://portfolio-backend-production-a732.up.railway.app/education')
+                .then((json) => setEducation(json.data))
         },
         []
     )
